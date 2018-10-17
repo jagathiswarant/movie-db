@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/jagathiswarant/movie-db/precache-manifest.5bd14bd4f97d1402759095dccf94a2a5.js"
+  "/movie-db/precache-manifest.8da4327fce66a293d487f4deb14e7734.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/jagathiswarant/movie-db/index.html", {
+workbox.routing.registerNavigationRoute("/movie-db/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
