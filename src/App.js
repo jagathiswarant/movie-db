@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Body from './components/Body';
 import './App.css';
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        data: {}
+    }
+}
+componentDidMount(){
+    fetch('https://api.themoviedb.org/3/movie/76341?api_key=6ba6426aea245961c58a70307114ce1a')
+    .then((response) => response.json())
+    .then(data => this.setState({data}));
+}
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Body data={this.state.data} />
       </div>
     );
   }
